@@ -3,6 +3,9 @@
 library(shiny)
 library(shinydashboard)
 library(ggplot2)
+
+# Load the Data set ------------------------------------------------------------
+water_potability <- read.csv(file = 'water_potability.csv')
 # Create user interface --------------------------------------------------------
 ui <- dashboardPage(
     dashboardHeader(title = "Project1"),
@@ -10,7 +13,7 @@ ui <- dashboardPage(
       sidebarMenu(
         # Tab 1 -- Dashboard
         menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
-        # Tab 2 -- Raw data
+        # Tab 2 -- Raw data 
         menuItem("Raw data", tabName = "rawdata", icon = icon("table"))
       )
     ),
@@ -36,16 +39,16 @@ ui <- dashboardPage(
       )
     )
 
-# Server ----------------------------------------------------------------------
+# Server -----------------------------------------------------------------------
 server <- function(input, output) {
-# Render the Histogram in Dashboard tab -----------------------
+# Render the Histogram in Dashboard tab --------------------------
   output$histogram <- renderPlot({
     WaterPH <- water_potability$ph[seq_len(input$slider)]
     hist(WaterPH)
   })
 # Render the Raw table in Raw data tab ---------------------------
   output$contents <- renderTable({
-    read.csv(water_potability.csv)
+    read.csv(file = 'water_potability.csv')
   })
   
   
@@ -59,5 +62,6 @@ server <- function(input, output) {
 
 
 
-# Run the application -------------------------------------------------------
+# Run the application ----------------------------------------------------------
 shinyApp(ui = ui, server = server)
+
