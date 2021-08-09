@@ -12,6 +12,7 @@ COPY water_potability.csv water_potability.csv
 #needed to install these separately
 RUN R -e "install.packages('shiny', repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('shinydashboard', repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('ggplot2', repos='http://cran.rstudio.com/')"
 
 #port to go to
 EXPOSE 3838
