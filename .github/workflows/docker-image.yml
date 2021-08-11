@@ -24,7 +24,7 @@ jobs:
     
     steps:
     - name: Run the Docker image
-      run: docker run --rm -p 3838:3838 dguest390/shiny-dashboard -d
+      run: docker run -d --rm -p 3838:3838 dguest390/shiny-dashboard 
       
       
     
