@@ -1,3 +1,4 @@
+#copied from actions market, I think the build is working, but don't really know yet.
 name: Docker Image CI
 
 on:
@@ -16,7 +17,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag dguest390/shiny-dashboard:$(date +%s)
-      
+   
+#This part was made off of what I thought would get the app running on local host. It doesn't.    
   second-job:
     
     needs: first-job
@@ -25,6 +27,9 @@ jobs:
     steps:
     - name: Run the Docker image
       run: docker run -d --rm -p 3838:3838 dguest390/shiny-dashboard 
+#These actions complete if you run them manually from the actions tab, but when I go to my localhost port 3838
+#nothing happens. Feel free to completely change all of this to try and get it to work. I figured I had some time so I 
+#messed around with it for a bit.
       
       
     
