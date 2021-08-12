@@ -22,12 +22,12 @@ ui <- dashboardPage(
       tabItem(tabName = "dashboard",
               fluidRow(
                 # Histogram graph ----------------------------------------------
-                box(plotOutput("histogram", height = 240)),
+                box(plotOutput("histogram", height = 219)),
                 # Slider for Histogram -----------------------------------------
                 box(
                   title = "Slider for Histogram",
-                  sliderInput("slider", "Number of observations:",
-                              1, 3276, 1500),
+                  varSelectInput("variable_histogram", "Variable:",
+                                 water_potability),
                   sliderInput("slider_bins","Number of bins:",1,60,30)
                 )
               ),
@@ -70,10 +70,9 @@ ui <- dashboardPage(
 server <- function(input, output) {
   # Render a Histogram in the Dashboard tab ------------------------------------
   output$histogram <- renderPlot({
-    WaterPH <- as.data.frame(water_potability$ph[1:input$slider])
-    ggplot(data = WaterPH) + aes(x = WaterPH[,1], y = ..density..) + 
+    ggplot(data = water_potability) + 
+      aes(x = !!input$variable_histogram, y = ..density..) + 
       geom_histogram(color="white",alpha=.5,bins=input$slider_bins) + 
-      scale_x_continuous("pH", c(0:14)) +
       scale_y_continuous(labels = percent) +
       theme_bw() + 
       theme(panel.grid.major = element_blank(), 
