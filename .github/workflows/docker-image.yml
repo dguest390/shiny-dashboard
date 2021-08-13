@@ -16,12 +16,6 @@ jobs:
     
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag dguest390/shiny-dashboard:$(date +%s)
-      
-    - name: Push the Docker image to Docker Hub
-      run: docker push dguest390/shiny-dashboard
-      
-    - name: Pull the Docker image
-      run: Docker pull dguest390/shiny-dashboard
    
     - name: Run the Docker image
       run: docker run -d --rm -p 3838:3838 dguest390/shiny-dashboard:$(date +%s)
