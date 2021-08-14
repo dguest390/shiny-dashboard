@@ -22,3 +22,12 @@ To Run this Project:
 
 1. [Docker Desktop](https://docs.docker.com/get-docker/) is the only app you need to have in order to run the finished product so make sure you have Docker installed
 2. 
+
+
+## Details
+
+__About The Project Here:__
+
+__Insert 2 Screenshots Here:__
+
+
