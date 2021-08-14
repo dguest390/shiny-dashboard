@@ -1,4 +1,5 @@
 <p align="center">
+  <img width="100" src="Media/shiny.png" alt="shinydashboard">
   <h3 align="center">Shiny-dashboard</h3>
   
   
