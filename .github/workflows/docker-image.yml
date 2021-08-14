@@ -14,5 +14,5 @@ jobs:
     - name: Build the Docker image and ping
       run: |
         docker build -t dguest390/shiny-dashboard .
-        docker run -d --rm -p 3838:3838 dguest390/shiny-dashboard
+        docker run -dp 3838:3838 dguest390/shiny-dashboard
         curl http://0.0.0.0:3838
