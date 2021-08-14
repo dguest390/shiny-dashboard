@@ -20,4 +20,4 @@ jobs:
       run: docker run -d --rm -p 3838:3838 dguest390/shiny-dashboard
 
     - name: Ping the running image
-      run: curl http://127.0.0.1:3838 --max-time 30
+      run: curl http://127.0.0.1:3838
