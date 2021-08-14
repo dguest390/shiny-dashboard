@@ -3,7 +3,6 @@
   <h3 align="center">Shiny Dashboard</h3>
   <p align="center"> R Shiny Dashboard inside a Docker container</p>
 
-<!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
@@ -11,6 +10,7 @@
     <li><a href="#prerequisites">Prerequisites</a></li>
     <li><a href="#quick-start">Quick Start</a></li>
     <li><a href="#details">Details</a></li>
+    <li><a href="#additional-resources">Additional Resources</a></li>
   </ol>
 </details>
  
@@ -51,4 +51,8 @@ __About The Project Here:__
 
 __Insert 2 Screenshots Here:__
 
+## Additional Resources
 
+* [Readme Template](https://github.com/othneildrew/Best-README-Template)
+* [Markdown Cheatsheet](https://www.markdownguide.org/cheat-sheet)
+* [Shiny](https://shiny.rstudio.com/)
