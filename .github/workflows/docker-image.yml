@@ -15,10 +15,10 @@ jobs:
     - uses: actions/checkout@v2
     
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag dguest390/shiny-dashboard:$(date +%s)
+      run: docker build . --file Dockerfile --tag dguest390/shiny-dashboard::${{ github.sha }}
    
     - name: Run the Docker image
-      run: docker run -d --rm -p 3838:3838 dguest390/shiny-dashboard:$(date +%s)
+      run: docker run -d --rm -p 3838:3838 dguest390/shiny-dashboard::${{ github.sha }}
       
     - name: Ping the running image
       run: curl http://127.0.0.1:3838 --max-time 30
