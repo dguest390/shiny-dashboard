@@ -17,4 +17,4 @@ jobs:
     - name: Ping local host
       run: |
           docker run -d --rm -p 3838:3838 dguest390/shiny-dashboard
-          curl http://localhost:3838 
+          curl http://localhost:3838/
