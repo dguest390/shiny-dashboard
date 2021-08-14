@@ -53,6 +53,6 @@ __Insert 2 Screenshots Here:__
 
 ## Additional Resources
 
-* [Readme Template](https://github.com/othneildrew/Best-README-Template)
 * [Markdown Cheatsheet](https://www.markdownguide.org/cheat-sheet)
-* [Shiny](https://shiny.rstudio.com/)
+* [Readme Template](https://github.com/othneildrew/Best-README-Template)
+* [Shiny Package](https://shiny.rstudio.com/)
