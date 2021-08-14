@@ -2,9 +2,21 @@
   <img width="250" src="Media/Shiny-logo.png" alt="shinydashboard">
   <h3 align="center">Shiny Dashboard</h3>
   <p align="center"> R Shiny Dashboard inside a Docker container</p>
+
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#about">About</a></li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#quick-start">Quick Start</a></li>
+    <li><a href="#details">Details</a></li>
+  </ol>
+</details>
  
- 
-__Quick Description of the Project here:__
+## About
+
+This project contains a sample [Shiny](https://rstudio.github.io/shinydashboard/) dashboard and a Dockerfile which builds and runs the application. Users can use their own datasets to create visualizations in R and make them accessible through a container.
   
 ## Prerequisites
 
