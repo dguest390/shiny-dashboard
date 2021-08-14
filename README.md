@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="100" src="Media/shiny.png" alt="shinydashboard">
+  <img width="250" src="Media/Shiny-logo.png" alt="shinydashboard">
   <h3 align="center">Shiny Dashboard</h3>
   
   
