@@ -14,9 +14,4 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Build the Docker image
-      run: docker build -t dguest390/shiny-dashboard .
-
-    - name: Run the Docker image and curl with pipe
-    - run: |
-          docker run -d --rm -p 3838:3838 dguest390/shiny-dashboard
-          curl http://localhost:3838/
+      run: docker build -t dguest390/shiny-dashboard . | docker run -d -rm -p 3838:3838 dguest390/shiny-dashboard | curl http://127.0.0.1:3838/
