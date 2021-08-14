@@ -21,9 +21,18 @@ Below are the tools you need to create this project:
 To Run this Project:
 
 1. [Docker Desktop](https://docs.docker.com/get-docker/) is the only app you need to have in order to run the finished product so make sure you have Docker installed
-2. 
-
-
+2. Once you have the Docker Desktop app and it's running, go to powershell and type in the following:
+    ```sh
+    docker pull dguest390/shiny-dashboard
+    ```
+3. Once you have pulled the Docker Image to your computer, type in the following:
+    ```sh
+    docker run --rm -p 3838:3838 dguest390/shiny-dashboard
+    ```
+4. Now you should be hosting your own copy of the Shinydashboard locally, go to your browser and go to the following URL: 
+    ```
+    127.0.0.1:3838
+    ```
 ## Details
 
 __About The Project Here:__
