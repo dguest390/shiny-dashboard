@@ -15,10 +15,4 @@ jobs:
       run: |
         docker build -t dguest390/shiny-dashboard .
         docker run -dp 3838:3838 dguest390/shiny-dashboard
-        docker run -dp 80:80 dguest390/shiny-dashboard
-        curl http://0.0.0.0:3838
-        curl http://localhost:3838
         curl http://127.0.0.1:3838
-        curl http://0.0.0.0:80
-        curl http://localhost:80
-        curl http://127.0.0.1:80
