@@ -50,6 +50,10 @@ To Run this Project:
 __About The Project Here:__
 
 __Insert 2 Screenshots Here:__
+<p align="center">
+<img src="Media/dash.jpg" alt="dashboard" width="600"/>
+<img src="Media/data.jpg" alt="data" width="600"/>
+
 
 ## Additional Resources
 
