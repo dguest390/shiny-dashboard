@@ -1,11 +1,14 @@
 <p align="center">
   <img width="250" src="Media/Shiny-logo.png" alt="shinydashboard">
   <h3 align="center">Shiny Dashboard</h3>
-  
+  <p align="center"> R Shiny Dashboard inside a Docker container</p>
+ 
+ 
+__Quick Description of the Project here:__
   
 ## Prerequisites
 
-Below are the tools used to create this project:
+Below are the tools you need to create this project:
 
 - [R version 4.0.5 (Shake and Throw)](https://mirror.las.iastate.edu/CRAN/)
 - [RStudio IDE](https://www.rstudio.com/products/rstudio/download/)
@@ -15,4 +18,4 @@ Below are the tools used to create this project:
 
 ## Quick Start
 
-Docker Desktop is the only app you need to have in order to run the finished product
+[Docker Desktop](https://docs.docker.com/get-docker/) is the only app you need to have in order to run the finished product
