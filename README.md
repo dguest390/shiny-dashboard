@@ -48,6 +48,19 @@ To Run this Project:
 ## Details
 
 __About The Project Here:__
+- Dockerfile
+  - The dockerfile builds a container to allow users to run the app without needing to worry about having to download the source code, data, RStudio, R, or any packages. Notes about the different parts can be found in our dockerfile. Our dockerfile can be copied to add to your own project. If your source code has different packages then ours, make sure to add those to your dockerfile.
+- Host your own repository
+  - To build a project that others can use you will need to create a Docker Hub repository. Go to [Docker Hub](https://hub.docker.com/) where you can create an account and create a new repository to name whatever you like. Once this repository is created you can build your project. In the terminal go into the directory where your project is located and type the command:
+  ```sh
+  docker build -t [your-directory-name] .
+  ```
+  - Once you have built your new docker image you will want to push it to the Docker Hub repository you created. To do this type the command:
+  ```sh
+  docker push [your-directory-name] [your-docker-hub-username]/[your-docker-hub-repository-name]
+  ```
+  - If successful, others can now pull your image from your Docker Hub to run on their own computer with the commands from our <a href="#quick-start">Quick Start</a> section above. (make sure to replace your Docker Hub username and repository name with our dguest390/shiny-dashboard
+  
 
 __Insert 2 Screenshots Here:__
 <p align="center">
