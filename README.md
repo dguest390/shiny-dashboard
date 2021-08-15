@@ -59,7 +59,7 @@ __About The Project Here:__
   ```sh
   docker push [your-directory-name] [your-docker-hub-username]/[your-docker-hub-repository-name]
   ```
-  - If successful, others can now pull your image from your Docker Hub to run on their own computer with the commands from our <a href="#quick-start">Quick Start</a> section above. (make sure to replace your Docker Hub username and repository name with our dguest390/shiny-dashboard
+  - If successful, others can now pull your image from your Docker Hub to run on their own computer with the commands from our <a href="#quick-start">Quick Start</a> section above. (make sure to replace our [dguest390/shiny-dashboard] with your [docker-hub-username/repository-name].)
   
 
 __Insert 2 Screenshots Here:__
