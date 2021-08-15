@@ -49,6 +49,10 @@ To Run this Project:
 ## Details
 
 __About The Project Here:__
+- R and Shiny Dashboard
+  - R Shiny is an R package we use to create the interactive web app from R, it is a simple web framework for building web applications without knowing HTML, CSS, or JavaScript. 
+- Building your own Shiny Dashboard
+  - To build your own Shiny Dashboard you must first have Shiny and Shinydashboard package downloaded in R. Then follow the basic guide to get started with Shiny Dashboard [here](https://rstudio.github.io/shinydashboard/get_started.html).
 - Dockerfile
   - The Dockerfile builds a container to allow users to run the app without needing to worry about having to download the source code, data, RStudio, R, or any packages. Notes about the different parts can be found in our Dockerfile. Our Dockerfile can be copied to add to your own project. If your source code has different packages then ours, make sure to add those to your Dockerfile.
 - Host your own repository
@@ -61,7 +65,6 @@ __About The Project Here:__
   docker push [your-directory-name] [your-docker-hub-account-name]/[your-docker-hub-repository-name]
   ```
   - If successful, others can now pull your image from your Docker Hub to run on their own computer with the commands from our <a href="#quick-start">Quick Start</a> section above. (make sure to replace our [dguest390/shiny-dashboard] with your [docker-hub-account-name/docker-hub-repository-name])
-  
 
 __Insert 2 Screenshots Here:__
 <p align="center">
