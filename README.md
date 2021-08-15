@@ -27,6 +27,7 @@ Below are the tools you need to create this project:
 - [Docker Desktop](https://docs.docker.com/get-docker/)
 - [GitHub Desktop](https://desktop.github.com/)
 - [Have an account on GitHub](https://github.com/join)
+- [Have an account on Docker Hub](https://hub.docker.com/signup/)
 
 ## Quick Start
 
@@ -49,17 +50,17 @@ To Run this Project:
 
 __About The Project Here:__
 - Dockerfile
-  - The dockerfile builds a container to allow users to run the app without needing to worry about having to download the source code, data, RStudio, R, or any packages. Notes about the different parts can be found in our dockerfile. Our dockerfile can be copied to add to your own project. If your source code has different packages then ours, make sure to add those to your dockerfile.
+  - The Dockerfile builds a container to allow users to run the app without needing to worry about having to download the source code, data, RStudio, R, or any packages. Notes about the different parts can be found in our Dockerfile. Our Dockerfile can be copied to add to your own project. If your source code has different packages then ours, make sure to add those to your Dockerfile.
 - Host your own repository
-  - To build a project that others can use you will need to create a Docker Hub repository. Go to [Docker Hub](https://hub.docker.com/) where you can create an account and create a new repository to name whatever you like. Once this repository is created you can build your project. In the terminal go into the directory where your project is located and type the command:
+  - To build a project that others can use you will need to create a Docker Hub repository. Go to [Docker Hub](https://hub.docker.com/signup/) where you can create an account and create a new repository to name whatever you like. Once this repository is created you can build your project. Go to the terminal and change directories into the directory where your project is located and type the command:
   ```sh
   docker build -t [your-directory-name] .
   ```
-  - Once you have built your new docker image you will want to push it to the Docker Hub repository you created. To do this type the command:
+  - Once you have built your new Docker image you will want to push it to the Docker Hub repository you created. To do this type the command:
   ```sh
-  docker push [your-directory-name] [your-docker-hub-username]/[your-docker-hub-repository-name]
+  docker push [your-directory-name] [your-docker-hub-account-name]/[your-docker-hub-repository-name]
   ```
-  - If successful, others can now pull your image from your Docker Hub to run on their own computer with the commands from our <a href="#quick-start">Quick Start</a> section above. (make sure to replace our [dguest390/shiny-dashboard] with your [docker-hub-username/repository-name].)
+  - If successful, others can now pull your image from your Docker Hub to run on their own computer with the commands from our <a href="#quick-start">Quick Start</a> section above. (make sure to replace our [dguest390/shiny-dashboard] with your [docker-hub-account-name/docker-hub-repository-name])
   
 
 __Insert 2 Screenshots Here:__
