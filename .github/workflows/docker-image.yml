@@ -15,4 +15,5 @@ jobs:
       run: |
         docker build -t dguest390/shiny-dashboard .
         docker run -dp 3838:3838 dguest390/shiny-dashboard
-        curl http://127.0.0.1:3838
+        sleep 10s
+        curl http://127.0.0.2:3838
