@@ -48,7 +48,6 @@ To Run this Project:
     ```
 ## Details
 
-__About The Project Here:__
 - R and Shiny Dashboard
   - R Shiny is an R package we use to create the interactive web app from R, it is a simple web framework for building web applications without knowing HTML, CSS, or JavaScript. 
 - Building your own Shiny Dashboard
@@ -66,7 +65,6 @@ __About The Project Here:__
   ```
   - If successful, others can now pull your image from your Docker Hub to run on their own computer with the commands from our <a href="#quick-start">Quick Start</a> section above. (make sure to replace our [dguest390/shiny-dashboard] with your [docker-hub-account-name/docker-hub-repository-name])
 
-__Insert 2 Screenshots Here:__
 <p align="center">
 <img src="Media/dash.jpg" alt="dashboard" width="600"/>
 <img src="Media/data.jpg" alt="data" width="600"/>
