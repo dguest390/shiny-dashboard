@@ -50,12 +50,14 @@ To Run this Project:
 
 - R and Shiny Dashboard
   - R Shiny is an R package we use to create the interactive web app from R, it is a simple web framework for building web applications without knowing HTML, CSS, or JavaScript. 
-- Building your own Shiny Dashboard
-  - To build your own Shiny Dashboard you must first have Shiny and Shinydashboard package downloaded in R. Then follow the basic guide to get started with Shiny Dashboard [here](https://rstudio.github.io/shinydashboard/get_started.html).
 - Dockerfile
   - The Dockerfile builds a container to allow users to run the app without needing to worry about having to download the source code, data, RStudio, R, or any packages. Notes about the different parts can be found in our Dockerfile. Our Dockerfile can be copied to add to your own project. If your source code has different packages then ours, make sure to add those to your Dockerfile.
-- Host your own repository
-  - To build a project that others can use you will need to create a Docker Hub repository. Go to [Docker Hub](https://hub.docker.com/signup/) where you can create an account and create a new repository to name whatever you like. Once this repository is created you can build your project. Go to the terminal and change directories into the directory where your project is located and type the command:
+- GitHub Action
+  - In our directoty .github/workflows/ we have a file docker-image.yml This is a GitHub action that upon every pull request or push to our shiny-dashboard repository it will build, run, and check our image to make sure everything is working correctly. That way if there's any problem with new code, we will be able to better see when and where it first happened. Feel free to add this to your own project. It must be in a directory .github/workflows/[whatever-name-you-choose].yml
+- Building your own Shiny Dashboard
+  - To build your own Shiny Dashboard you must first have Shiny and Shinydashboard package downloaded in R. Then follow the basic guide to get started with Shiny Dashboard [here](https://rstudio.github.io/shinydashboard/get_started.html).
+- Host your own Docker Hub repository
+  - Once you have your own project fully completed with source code (ours is app.r), data (ours is water_potability.csv), and Dockerfile, you can have your own Docker Hub repository others can view and interact with. You will need to create a Docker Hub repository. Go to [Docker Hub](https://hub.docker.com/signup/) where you can create an account and create a new repository to name whatever you like. Once this repository is created you can build your project. Go to the terminal and change directories into the directory where your project is located and type the command:
   ```sh
   docker build -t [your-directory-name] .
   ```
