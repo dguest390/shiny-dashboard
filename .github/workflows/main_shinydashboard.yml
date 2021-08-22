@@ -23,14 +23,14 @@ jobs:
       uses: docker/login-action@v1
       with:
         registry: https://index.docker.io/v1/
-        username: ${{ secrets.AzureAppService_ContainerUsername_4c564a32cb47426db0375af90f346019 }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_fe93de84d05648db9d62c21c86500e07 }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_65a328a3a8174268a717e83c3607a602 }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_dff71f8afc474d3cb60a76638a9214d3 }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_4c564a32cb47426db0375af90f346019 }}/dguest390/shiny-dashboard:${{ github.sha }}
+        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_65a328a3a8174268a717e83c3607a602 }}/shiny-dashboard:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'shinydashboard'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_2ae9e2d7320a427fa7fc317f9e8953c8 }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_4c564a32cb47426db0375af90f346019 }}/dguest390/shiny-dashboard:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_7d7dd33855864c9c8b48d8b043cebe47 }}
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_65a328a3a8174268a717e83c3607a602 }}/shiny-dashboard:${{ github.sha }}'
