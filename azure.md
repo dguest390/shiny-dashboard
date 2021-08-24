@@ -1,6 +1,6 @@
 - Deploy to Azure
   - Once your GitHub repository is complete and you have your final image on Docker Hub you can depoly your app to the cloud for all to view using Azure. 
-  - Sign up for an [Azure account](signup.azure.com)
+  - Sign up for an [Azure account](azure.com)
   - Navigate to your Azure Portal (should be under your profile in top right)
   - Click Create Resource, then, under Web App click create
   - Fill in the following fields:
