@@ -4,7 +4,7 @@
   - Navigate to your Azure Portal (should be under your profile in top right)
   - Click Create Resource, then, under Web App click create
   - Fill in the following fields:
-  - Resource Group: Name your resource
+  - Resource Group: Name your resource whatever you like
   - Name: Enter a name for your website. [what-you-enter].azurewebsites.net
   - Publish: Docker container
   - Operating System: Linux
