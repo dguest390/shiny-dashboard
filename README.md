@@ -63,9 +63,44 @@ To Run this Project:
   ```
   - Once you have built your new Docker image you will want to push it to the Docker Hub repository you created. To do this type the command:
   ```sh
-  docker push [your-directory-name] [your-docker-hub-account-name]/[your-docker-hub-repository-name]
+  docker push [your-docker-hub-account-name]/[your-docker-hub-repository-name]
   ```
   - If successful, others can now pull your image from your Docker Hub to run on their own computer with the commands from our <a href="#quick-start">Quick Start</a> section above. (make sure to replace our [dguest390/shiny-dashboard] with your [docker-hub-account-name/docker-hub-repository-name])
+- Deploy to Azure
+  - Once your GitHub repository is complete and you have your final image on Docker Hub you can depoly your app to the cloud for all to view using Azure. 
+  - Sign up for an [Azure account](signup.azure.com)
+  - Navigate to your Azure Portal (should be under your profile in top right)
+  - Click Create Resource, then, under Web App click create
+  - Fill in the following fields:
+  - Resource Group: Name your resource
+  - Name: Enter a name for your website. [what-you-enter].azurewebsites.net
+  - Publish: Docker container
+  - Operating System: Linux
+  - Region: Choose your location
+  - SKU and Size: Must choose 1.75 paid option, the free one won't work (It's still free for awhile and you can cancel when you like)
+  - Click Next:Docker >
+  - Image Source: Docker Hub
+  - Image and Tag: [name-of-your-image]:latest
+  - Click Next:Monitoring >
+  - Click Next:Tags >
+  - Click Next:Review + Create
+  - Click Create
+  - After a minute you will have the option to click "Go to Resource", click this option
+  - On the left hand sidebar click Deployment Center
+  - Choose - Source: Apply GitHub actions: Build, Deploy...
+  - Organization: Your GitHub account name
+  - Repository: The repository where your app is located
+  - Branch: Main
+  - Under Registry Settings add your Docker Hub login and password
+  - At the top of the page click save button
+  - On the left hand sidebar click Configuration
+  - Click New Application button
+  - Name: WEBSITE_PORT
+  - Value: 3838 (the EXPOSE port in Dockerfile, 3838 was ours)
+  - At the top of the page click save button
+  - On left hand sidebar click Overview
+  - At the top of the page select Stop, and stop your app. Then select Start. This works to restart the app and speeds up the process.
+  - Wait several minutes and then select the URL link on the right side of the page to visit your Web-App now running in the Azure cloud!
 
 <p align="center">
 <img src="Media/dash.jpg" alt="dashboard" width="600"/>
