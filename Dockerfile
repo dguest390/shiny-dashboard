@@ -9,7 +9,7 @@ WORKDIR /app
 COPY app.R app.R
 COPY water_potability.csv water_potability.csv
 
-#these our the packages used in our source code. They need to be installed separately into the dockerfile
+#these are the packages used in our source code. They need to be installed separately into the dockerfile
 RUN R -e "install.packages('shiny', repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('shinydashboard', repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('ggplot2', repos='http://cran.rstudio.com/')"
